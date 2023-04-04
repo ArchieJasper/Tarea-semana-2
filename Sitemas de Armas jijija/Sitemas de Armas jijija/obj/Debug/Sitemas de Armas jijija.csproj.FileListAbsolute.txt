@@ -1,0 +1,7 @@
+C:\Archie Data\TLS - Toulouse Lautrec\2023-1 ---\Programación y Producción\Promedio 1\Tarea semana 2\Tarea-semana-2\Sitemas de Armas jijija\Sitemas de Armas jijija\bin\Debug\Sitemas de Armas jijija.exe.config
+C:\Archie Data\TLS - Toulouse Lautrec\2023-1 ---\Programación y Producción\Promedio 1\Tarea semana 2\Tarea-semana-2\Sitemas de Armas jijija\Sitemas de Armas jijija\bin\Debug\Sitemas de Armas jijija.exe
+C:\Archie Data\TLS - Toulouse Lautrec\2023-1 ---\Programación y Producción\Promedio 1\Tarea semana 2\Tarea-semana-2\Sitemas de Armas jijija\Sitemas de Armas jijija\bin\Debug\Sitemas de Armas jijija.pdb
+C:\Archie Data\TLS - Toulouse Lautrec\2023-1 ---\Programación y Producción\Promedio 1\Tarea semana 2\Tarea-semana-2\Sitemas de Armas jijija\Sitemas de Armas jijija\obj\Debug\Sitemas de Armas jijija.csproj.AssemblyReference.cache
+C:\Archie Data\TLS - Toulouse Lautrec\2023-1 ---\Programación y Producción\Promedio 1\Tarea semana 2\Tarea-semana-2\Sitemas de Armas jijija\Sitemas de Armas jijija\obj\Debug\Sitemas de Armas jijija.csproj.CoreCompileInputs.cache
+C:\Archie Data\TLS - Toulouse Lautrec\2023-1 ---\Programación y Producción\Promedio 1\Tarea semana 2\Tarea-semana-2\Sitemas de Armas jijija\Sitemas de Armas jijija\obj\Debug\Sitemas de Armas jijija.exe
+C:\Archie Data\TLS - Toulouse Lautrec\2023-1 ---\Programación y Producción\Promedio 1\Tarea semana 2\Tarea-semana-2\Sitemas de Armas jijija\Sitemas de Armas jijija\obj\Debug\Sitemas de Armas jijija.pdb

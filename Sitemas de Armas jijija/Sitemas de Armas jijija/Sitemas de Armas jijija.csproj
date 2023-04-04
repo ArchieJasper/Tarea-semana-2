@@ -43,6 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Arco.cs" />
+    <Compile Include="Bala.cs" />
+    <Compile Include="Espada.cs" />
+    <Compile Include="Flecha.cs" />
+    <Compile Include="Pistola.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

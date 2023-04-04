@@ -16,17 +16,25 @@ namespace Sitemas_de_Armas_jijija
                 
                 string selection;
                 Console.WriteLine("Introduce un numero: ");
-                Console.WriteLine("1. Introduce el numero");
-                Console.WriteLine("2. Introduce el numero");
-                Console.WriteLine("3. Introduce el numero");
+                Console.WriteLine("1. Espada");
+                Console.WriteLine("2. Arco");
+                Console.WriteLine("3. Pistola");
                 selection = Console.ReadLine();
 
                 switch(selection)
                 {
                     case "1":
+                        Console.WriteLine("Espada");
+                        break;
+                    case "2":
                         Console.WriteLine("2. Introduce el numero");
-                        Break;
+                        break;
+                    case "3":
+                        Console.WriteLine("2. Introduce el numero");
+
+                        break;
                 }
+                Console.ReadLine();
             }
         }
     }
