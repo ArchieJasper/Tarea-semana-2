@@ -10,48 +10,117 @@ namespace Sitemas_de_Armas_jijija
     {
         static void Main(string[] args)
         {
+
             bool continueFlag = true;
             while(continueFlag)
             {
-                
-                string selection;
-                Console.WriteLine("-> Escoge un arma de la tienda: ");
-                Console.WriteLine("-> 1. Espada");
-                Console.WriteLine("-> 2. Arco");
-                Console.WriteLine("-> 3. Pistola");
-                selection = Console.ReadLine();
 
-                switch(selection)
+                string armas;
+                string munición;
+                string inventario;
+                Console.WriteLine("-> Escoge un arma de la tienda: ");
+                Console.WriteLine("- 1. Espada");
+                Console.WriteLine("- 2. Arco");
+                Console.WriteLine("- 3. Pistola");
+                armas = Console.ReadLine();
+
+
+                Console.WriteLine("-> Escoge munición de la tienda: ");
+                Console.WriteLine("- 4. Flechas");
+                Console.WriteLine("- 5. Balas 9mm");
+                munición = Console.ReadLine();
+                Console.Clear();
+
+                switch (armas)
                 {
                     case "1":
-                        Console.WriteLine("Espada mediana: ");
+                        Espada espada = new espada("Espada Mediana",19.99f,50,20f);
+                        espada.data();
+                        inventario.Add(espada);
+                        Console.ReadLine();
+                        break;
+
+                        Console.WriteLine("-> Espada mediana: ");
                         float CostoEspada = 19.99f;
-                        Console.WriteLine("Precio: $"+CostoEspada);
-                        float DañoE = 50f;
-                        Console.WriteLine("Daño: "+DañoE);
-                        float VelocidadAtaqueE= 20f;
-                        Console.WriteLine("Velocidad de ataque: "+VelocidadAtaqueE+"k/m");
+                        Console.WriteLine("- Precio: $" + CostoEspada);
+                        int DañoEspada = 50;
+                        Console.WriteLine("- Daño: " + DañoEspada);
+                        float Velocidad_Ataque_Espada = 20f;
+                        Console.WriteLine("- Velocidad de ataque: " + Velocidad_Ataque_Espada + "s");
+                        
                         break;
                     case "2":
-                        Console.WriteLine("Arco deportivo: ");
-                        float costoA = 12.99f;
-                        Console.WriteLine("Precio: $"+costoA);
-                        float DañoA = 15f;
-                        Console.WriteLine("Daño: " + DañoA);
-                        float VelocidadAtaqueA = 15f;
-                        Console.WriteLine("Precio: $" + VelocidadAtaqueA);
-                        float Flechas=10;
-                        Console.WriteLine("Munición: Flechas "+Flechas);
+                        Console.WriteLine("-> Arco deportivo: ");
+                        float CostoArco = 12.99f;
+                        Console.WriteLine("- Precio: $" + CostoArco);
+                        int DañoArco = 15;
+                        Console.WriteLine("- Daño: " + DañoArco);
+                        float Velocidad_Ataque_Arco = 10f;
+                        Console.WriteLine("- Velocidad de ataque: " + Velocidad_Ataque_Arco + "s");
                         break;
                     case "3":
-                        float costoPistola = 14.99f;
-                        Console.WriteLine("Pistola Glock-18: $"+costoPistola);
+                        float CostoPistola = 14.99f;
+                        Console.WriteLine("Pistola Glock-18: $" + CostoPistola);
+                        int DañoPistola = 35;
+                        Console.WriteLine("- Daño: " + DañoPistola);
+                        float Velocidad_Ataque_Pistola = 5f;
+                        Console.WriteLine("- Velocidad de ataque: " + Velocidad_Ataque_Pistola + "s");
+                        break;
+                    default:
+                        Console.WriteLine("Opción no válido");
+                        break;
+                }
+
+                switch (munición)
+                {
+                    case "4":
+                        Flecha flecha = new flecha("Flecha ",10.99f,10);
+
+                        Console.WriteLine("-> 10 Flechas: ");
+                        float CostoFlechas = 10.99f;
+                        Console.WriteLine("- Precio: $" + CostoFlechas);
+                        int DañoFlechas = 10;
+                        Console.WriteLine("- Daño: " + DañoFlechas);
+                        break;
+                    case "5":
+                        Bala bala = new Bala("Bala ",17.99f,60);
+
+                        Console.WriteLine("-> 1 paquete de Balas 9mm: ");
+                        float CostoBalas = 17.99f;
+                        Console.WriteLine("- Precio: $" + CostoBalas);
+                        int DañoBalas = 60;
+                        Console.WriteLine("- Daño: " + DañoBalas);
                         break;
                     default:
                         Console.WriteLine("Opción no válido");
                         break;
                 }
                 Console.ReadLine();
+
+
+
+                if (inventario.Count > 0)
+                {
+                    for (int i = 0; i < inventario.Count; i++)
+                    {
+                        Console.WriteLine(inventario[i].GetType().Name);
+                    }
+
+                    Console.WriteLine("-> Eliminar item");
+                    Console.WriteLine("-> Salir");
+                    armas = Console.ReadLine();
+                    munición = Console.ReadLine();
+                    Console.Clear();
+
+                    switch (armas)
+                    {
+                        Console.WriteLine("Escriba el numero para eliminar");
+                         for (int i = 0; i < inv.Count; i++)
+                         {
+
+                         }
+                    }
+                 }
             }
         }
     }

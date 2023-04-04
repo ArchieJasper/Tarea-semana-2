@@ -6,10 +6,14 @@ using System.Threading.Tasks;
 
 namespace Sitemas_de_Armas_jijija
 {
-    class Arco : Flecha
+    class Arco : Inventario
     {
         //private float costo = 12.99f;
-        private float dañoA;
-        private float velocidad_ataque = 20f;
+        private int DañoArco;
+        private float Velocidad_Ataque_Arco = 20f;
+
+        public Arco(float DañoArco, float Velocidad_Ataque_Arco)
+        {
+        }
     }
 }

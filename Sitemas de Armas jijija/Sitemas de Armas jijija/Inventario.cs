@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace Sitemas_de_Armas_jijija
 {
-    class Pistola : Inventario
+    abstract class Inventario
     {
-        //private float costo = 14.99f;
-        private float dañoP;
-        private float velocidad_ataque = 5f;
+        public abstract void data();
     }
 }
+

@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Sitemas_de_Armas_jijija
 {
-    class Flecha
+    class Flecha : Inventario
     {
-        private float dañoFlecha = 10;
+        private float DañoFlecha = 10;
     }
 }
