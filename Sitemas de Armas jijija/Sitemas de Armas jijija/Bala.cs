@@ -8,5 +8,6 @@ namespace Sitemas_de_Armas_jijija
 {
     class Bala
     {
+        private float dañoBala = 15;
     }
 }

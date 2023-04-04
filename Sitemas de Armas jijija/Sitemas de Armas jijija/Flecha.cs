@@ -8,5 +8,6 @@ namespace Sitemas_de_Armas_jijija
 {
     class Flecha
     {
+        private float dañoFlecha = 10;
     }
 }
