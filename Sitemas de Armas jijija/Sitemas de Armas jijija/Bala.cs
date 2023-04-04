@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sitemas_de_Armas_jijija
 {
-    class Bala : Inventario
+    class Bala : ArmasMunicion
     {
         private float dañoBala = 15;
     }

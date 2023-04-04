@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sitemas_de_Armas_jijija
 {
-    class Espada: Armas&Munición
+    class Espada: ArmasMunicion
     {
         private string Nombre;
         private float CostoEspada;

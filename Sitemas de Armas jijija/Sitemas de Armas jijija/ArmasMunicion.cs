@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Sitemas_de_Armas_jijija
 {
-    class Flecha : ArmasMunicion
+    abstract class ArmasMunicion
     {
-        private float DañoFlecha = 10;
+        public abstract void data();
     }
 }

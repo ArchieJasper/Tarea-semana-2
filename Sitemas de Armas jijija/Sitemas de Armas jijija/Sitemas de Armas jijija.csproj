@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Arco.cs" />
+    <Compile Include="ArmasMunicion.cs" />
     <Compile Include="Bala.cs" />
     <Compile Include="Espada.cs" />
     <Compile Include="Flecha.cs" />

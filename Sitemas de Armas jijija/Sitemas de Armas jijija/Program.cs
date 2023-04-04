@@ -17,7 +17,7 @@ namespace Sitemas_de_Armas_jijija
 
                 string armas;
                 string munición;
-                string inventario;
+                string ArmasMunicion;
                 Console.WriteLine("-> Escoge un arma de la tienda: ");
                 Console.WriteLine("- 1. Espada");
                 Console.WriteLine("- 2. Arco");
@@ -34,11 +34,11 @@ namespace Sitemas_de_Armas_jijija
                 switch (armas)
                 {
                     case "1":
-                        Espada espada = new espada("Espada Mediana",19.99f,50,20f);
+                        Espada espada = new espada//("Espada Mediana",19.99f,50,20f);
                         espada.data();
-                        inventario.Add(espada);
-                        Console.ReadLine();
-                        break;
+                        ArmasMunicion.Add(espada);
+                        //Console.ReadLine();
+                        //break;
 
                         Console.WriteLine("-> Espada mediana: ");
                         float CostoEspada = 19.99f;
@@ -47,7 +47,7 @@ namespace Sitemas_de_Armas_jijija
                         Console.WriteLine("- Daño: " + DañoEspada);
                         float Velocidad_Ataque_Espada = 20f;
                         Console.WriteLine("- Velocidad de ataque: " + Velocidad_Ataque_Espada + "s");
-                        
+                        Console.ReadLine();
                         break;
                     case "2":
                         Console.WriteLine("-> Arco deportivo: ");
@@ -99,9 +99,9 @@ namespace Sitemas_de_Armas_jijija
 
 
 
-                if (inventario.Count > 0)
+                if (ArmasMunicion.Count > 0)
                 {
-                    for (int i = 0; i < inventario.Count; i++)
+                    for (int i = 0; i < ArmasMunicion.Count; i++)
                     {
                         Console.WriteLine(inventario[i].GetType().Name);
                     }
@@ -115,7 +115,7 @@ namespace Sitemas_de_Armas_jijija
                     switch (armas)
                     {
                         Console.WriteLine("Escriba el numero para eliminar");
-                         for (int i = 0; i < inv.Count; i++)
+                         for (int i = 0; i < ArmasMunicion.Count; i++)
                          {
 
                          }

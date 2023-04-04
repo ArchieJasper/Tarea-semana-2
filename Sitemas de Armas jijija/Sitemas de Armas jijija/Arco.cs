@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sitemas_de_Armas_jijija
 {
-    class Arco : Inventario
+    class Arco : ArmasMunicion
     {
         //private float costo = 12.99f;
         private int DañoArco;
