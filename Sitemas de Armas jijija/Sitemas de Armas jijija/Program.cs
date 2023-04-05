@@ -10,45 +10,35 @@ namespace Sitemas_de_Armas_jijija
     {
         static void Main(string[] args)
         {
-
             bool continueFlag = true;
+            List<ArmasMunicion> inv = new List<ArmasMunicion>();
+
             while(continueFlag)
             {
-
-                string armas;
-                string munición;
-                string ArmasMunicion;
                 Console.WriteLine("-> Escoge un arma de la tienda: ");
                 Console.WriteLine("- 1. Espada");
                 Console.WriteLine("- 2. Arco");
                 Console.WriteLine("- 3. Pistola");
-                armas = Console.ReadLine();
-
 
                 Console.WriteLine("-> Escoge munición de la tienda: ");
                 Console.WriteLine("- 4. Flechas");
                 Console.WriteLine("- 5. Balas 9mm");
-                munición = Console.ReadLine();
                 Console.Clear();
+
+                string armas;
+                armas = Console.ReadLine();
+                string munición;
+                munición = Console.ReadLine();
 
                 switch (armas)
                 {
                     case "1":
-                        Espada espada = new espada//("Espada Mediana",19.99f,50,20f);
-                        espada.data();
-                        ArmasMunicion.Add(espada);
-                        //Console.ReadLine();
-                        //break;
-
-                        Console.WriteLine("-> Espada mediana: ");
-                        float CostoEspada = 19.99f;
-                        Console.WriteLine("- Precio: $" + CostoEspada);
-                        int DañoEspada = 50;
-                        Console.WriteLine("- Daño: " + DañoEspada);
-                        float Velocidad_Ataque_Espada = 20f;
-                        Console.WriteLine("- Velocidad de ataque: " + Velocidad_Ataque_Espada + "s");
+                        Espada espada = new Espada("Espada Mediana",19.99f,20f,50);
+                        espada.Data();
+                        inv.Add(espada);
                         Console.ReadLine();
                         break;
+
                     case "2":
                         Console.WriteLine("-> Arco deportivo: ");
                         float CostoArco = 12.99f;

@@ -8,6 +8,6 @@ namespace Sitemas_de_Armas_jijija
 {
     abstract class ArmasMunicion
     {
-        public abstract void data();
+        public abstract void Data();
     }
 }

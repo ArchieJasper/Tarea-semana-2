@@ -8,12 +8,25 @@ namespace Sitemas_de_Armas_jijija
 {
     class Arco : ArmasMunicion
     {
-        //private float costo = 12.99f;
-        private int DañoArco;
-        private float Velocidad_Ataque_Arco = 20f;
+        public string NombreArco;
+        public float PrecioArco;
+        public float Vel_AtkArco;
+        public int DmgArco;
 
-        public Arco(float DañoArco, float Velocidad_Ataque_Arco)
+        public Arco(string NombreArco, float PrecioArco, float Vel_AtkArco, int DmgArco)
         {
+            this.NombreArco = NombreArco;
+            this.PrecioArco = PrecioArco;
+            this.Vel_AtkArco = Vel_AtkArco;
+            this.DmgArco = DmgArco;
+        }
+        public override void Data()
+        {
+            Console.WriteLine("Nombre: " + NombreArco);
+            Console.WriteLine("Precio: " + PrecioArco);
+            Console.WriteLine("Velocidad de ataque: " + Vel_AtkArco);
+            Console.WriteLine("Daño: " + DmgArco);
+            Console.WriteLine("Daño por segundo: " + DmgArco / Vel_AtkArco);
         }
     }
 }

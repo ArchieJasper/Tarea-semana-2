@@ -8,8 +8,25 @@ namespace Sitemas_de_Armas_jijija
 {
     class Pistola : ArmasMunicion
     {
-        //private float costo = 14.99f;
-        private float dañoP;
-        private float velocidad_ataque = 5f;
+        public string NombrePistola;
+        public float PrecioPistola;
+        public float Vel_AtkPistola;
+        public int DmgPistola;
+
+        public Pistola(string NombrePistola, float PrecioPistola, float Vel_AtkPistola, int DmgPistola)
+        {
+            this.NombrePistola = NombrePistola;
+            this.PrecioPistola = PrecioPistola;
+            this.Vel_AtkPistola = Vel_AtkPistola;
+            this.DmgPistola = DmgPistola;
+        }
+        public override void Data()
+        {
+            Console.WriteLine("Nombre: " + NombrePistola);
+            Console.WriteLine("Precio: " + PrecioPistola);
+            Console.WriteLine("Velocidad de ataque: " + Vel_AtkPistola);
+            Console.WriteLine("Daño: " + DmgPistola);
+            Console.WriteLine("Daño por segundo: " + DmgPistola / Vel_AtkPistola);
+        }
     }
 }

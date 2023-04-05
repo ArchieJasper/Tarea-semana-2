@@ -8,26 +8,24 @@ namespace Sitemas_de_Armas_jijija
 {
     class Espada: ArmasMunicion
     {
-        private string Nombre;
-        private float CostoEspada;
-        private int DañoEspada;
-        private float Velocidad_Ataque_Espada;
-        public Espada(string Nombre, float CostoEspada, int DañoEspada,float Velocidad_Ataque_Espada)
+        public string Nombre;
+        public float Precio;
+        public float Vel_Atk;
+        public int Dmg;
+        public Espada(string Nombre, float Precio, float Vel_Atk, int Dmg)
         {
             this.Nombre = Nombre;
-            this.CostoEspada = CostoEspada;
-            this.Velocidad_Ataque_Espada = Velocidad_Ataque_Espada;
-            this.DañoEspada = DañoEspada;
+            this.Precio = Precio;
+            this.Vel_Atk = Vel_Atk;
+            this.Dmg = Dmg;
         }
-        public override void data()
+        public override void Data()
         {
-            Console.WriteLine("Nombre " + Nombre);
-            Console.WriteLine("Precio " + CostoEspada);
-            Console.WriteLine("Daño " + DañoEspada);
-            Console.WriteLine("Velocidad de ataque " + Velocidad_Ataque_Espada);
-
-            int DañoPorSec = Convert.ToInt32(DañoEspada / Velocidad_Ataque_Espada);
-            Console.WriteLine("Daño por segundo: " + DañoPorSec);
+            Console.WriteLine("Nombre: " + Nombre);
+            Console.WriteLine("Precio: " + Precio);
+            Console.WriteLine("Velocidad de ataque: " + Vel_Atk);
+            Console.WriteLine("Daño: " + Dmg);
+            Console.WriteLine("Daño por segundo: "+ Dmg / Vel_Atk);
         }
     }
 }
