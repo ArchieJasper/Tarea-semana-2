@@ -8,6 +8,21 @@ namespace Sitemas_de_Armas_jijija
 {
     class Bala : ArmasMunicion
     {
-        private float dañoBala = 15;
+        public string NombreBala;
+        public float PrecioBala;
+        public int DañoBala;
+
+        public Bala(string NombreBala, float PrecioBala, int DañoBala)
+        {
+            this.NombreBala = NombreBala;
+            this.PrecioBala = PrecioBala;
+            this.DañoBala = DañoBala;
+        }
+        public override void Data()
+        {
+            Console.WriteLine("Nombre " + NombreBala);
+            Console.WriteLine("Precio " + PrecioBala);
+            Console.WriteLine("Daño " + DañoBala);
+        }
     }
 }

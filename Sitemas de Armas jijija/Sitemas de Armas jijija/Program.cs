@@ -15,102 +15,126 @@ namespace Sitemas_de_Armas_jijija
 
             while(continueFlag)
             {
-                Console.WriteLine("-> Escoge un arma de la tienda: ");
-                Console.WriteLine("- 1. Espada");
-                Console.WriteLine("- 2. Arco");
-                Console.WriteLine("- 3. Pistola");
+                string seleccionar;
+                Console.WriteLine("1: Comprar arma");
+                Console.WriteLine("2: Inventario");
+                Console.WriteLine("3: Salida");
 
-                Console.WriteLine("-> Escoge munición de la tienda: ");
-                Console.WriteLine("- 4. Flechas");
-                Console.WriteLine("- 5. Balas 9mm");
+                seleccionar = Console.ReadLine();
                 Console.Clear();
 
-                string armas;
-                armas = Console.ReadLine();
-                string munición;
-                munición = Console.ReadLine();
-
-                switch (armas)
+                switch (seleccionar)
                 {
+
+                  case "a":
+
+                    Console.WriteLine("-> Escoge un arma de la tienda: ");
+                    Console.WriteLine("- 1. Espada");
+                    Console.WriteLine("- 2. Arco");
+                    Console.WriteLine("- 3. Pistola");
+
+                    Console.WriteLine("-> Escoge munición de la tienda: ");
+                    Console.WriteLine("- 4. Flechas");
+                    Console.WriteLine("- 5. Balas 9mm");
+                    Console.Clear();
+
+
                     case "1":
-                        Espada espada = new Espada("Espada Mediana",19.99f,20f,50);
+                        Espada espada = new Espada("Espada Mediana: ",39.99f,20f,50);
                         espada.Data();
                         inv.Add(espada);
                         Console.ReadLine();
                         break;
 
                     case "2":
-                        Console.WriteLine("-> Arco deportivo: ");
-                        float CostoArco = 12.99f;
-                        Console.WriteLine("- Precio: $" + CostoArco);
-                        int DañoArco = 15;
-                        Console.WriteLine("- Daño: " + DañoArco);
-                        float Velocidad_Ataque_Arco = 10f;
-                        Console.WriteLine("- Velocidad de ataque: " + Velocidad_Ataque_Arco + "s");
+                        Arco arco = new Arco("Arco deportivo: ", 25.99f, 10f, 15);
+                        arco.Data();
+                        inv.Add(arco);
+                        Console.ReadLine();
                         break;
+
                     case "3":
-                        float CostoPistola = 14.99f;
-                        Console.WriteLine("Pistola Glock-18: $" + CostoPistola);
-                        int DañoPistola = 35;
-                        Console.WriteLine("- Daño: " + DañoPistola);
-                        float Velocidad_Ataque_Pistola = 5f;
-                        Console.WriteLine("- Velocidad de ataque: " + Velocidad_Ataque_Pistola + "s");
+                        Pistola pistola = new Pistola("Glock-18: ", 29.99f, 5f, 35);
+                        pistola.Data();
+                        inv.Add(pistola);
+                        Console.ReadLine();
                         break;
-                    default:
-                        Console.WriteLine("Opción no válido");
-                        break;
-                }
-
-                switch (munición)
-                {
                     case "4":
-                        Flecha flecha = new flecha("Flecha ",10.99f,10);
-
-                        Console.WriteLine("-> 10 Flechas: ");
-                        float CostoFlechas = 10.99f;
-                        Console.WriteLine("- Precio: $" + CostoFlechas);
-                        int DañoFlechas = 10;
-                        Console.WriteLine("- Daño: " + DañoFlechas);
+                        Flecha flecha = new Flecha("Flecha de velocidad ", 10.99f, 10);
+                        flecha.Data();
+                        inv.Add(flecha);
+                        Console.ReadLine();
                         break;
+
                     case "5":
-                        Bala bala = new Bala("Bala ",17.99f,60);
-
-                        Console.WriteLine("-> 1 paquete de Balas 9mm: ");
-                        float CostoBalas = 17.99f;
-                        Console.WriteLine("- Precio: $" + CostoBalas);
-                        int DañoBalas = 60;
-                        Console.WriteLine("- Daño: " + DañoBalas);
+                        Bala bala = new Bala("Bala ", 17.99f, 60);
+                        bala.Data();
+                        inv.Add(bala);
+                        Console.ReadLine();
                         break;
+
                     default:
-                        Console.WriteLine("Opción no válido");
+                        Console.WriteLine("Opción no válida");
+                        Console.ReadLine();
                         break;
                 }
-                Console.ReadLine();
 
+                break;
 
+              case "b": //inventario 
 
-                if (ArmasMunicion.Count > 0)
+                if (inv.Count > 0)
                 {
-                    for (int i = 0; i < ArmasMunicion.Count; i++)
+                    for (int i = 0; i < inv.Count; i++)
                     {
-                        Console.WriteLine(inventario[i].GetType().Name);
+                        Console.WriteLine(inv[i].GetType().Name);
                     }
 
-                    Console.WriteLine("-> Eliminar item");
-                    Console.WriteLine("-> Salir");
-                    armas = Console.ReadLine();
-                    munición = Console.ReadLine();
+
+                    Console.WriteLine("1) Eliminar item ");
+                    Console.WriteLine("2) Back ");
+                    seleccionar = Console.ReadLine();
                     Console.Clear();
 
-                    switch (armas)
+                    switch (seleccionar)
                     {
-                        Console.WriteLine("Escriba el numero para eliminar");
-                         for (int i = 0; i < ArmasMunicion.Count; i++)
-                         {
+                        case "1":
 
-                         }
+                            Console.WriteLine("Escriba el numero al costado del item para eliminar el objeto");
+                            Console.WriteLine("-----------------");
+                            Console.WriteLine(" ");
+                            for (int i = 0; i < inv.Count; i++)
+                            {
+                                Console.WriteLine(i + "] " + inv[i].GetType().Name);
+                            }
+
+                            int a = int.Parse(Console.ReadLine()); //convierte de texto a entero
+
+                            inv.Remove(inv[a]); //elimina objeto
+
+                            Console.Clear();
+
+                            break;
+
+                        case "2":
+
+
+
+                            break;
                     }
-                 }
+                }
+
+                else
+                {
+                    Console.WriteLine(" No hay nada ");
+                    Console.ReadLine();
+                    Console.Clear();
+                }
+                break;
+
+                    case "3":
+                        continuidad = false; //cerrar programa
+                break;
             }
         }
     }
