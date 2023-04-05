@@ -26,7 +26,7 @@ namespace Sitemas_de_Armas_jijija
                 switch (seleccionar)
                 {
 
-                  case "a":
+                  case "1":
 
                     Console.WriteLine("-> Escoge un arma de la tienda: ");
                     Console.WriteLine("- 1. Espada");
@@ -81,7 +81,7 @@ namespace Sitemas_de_Armas_jijija
 
                 break;
 
-              case "b": //inventario 
+              case "2": //inventario 
 
                 if (inv.Count > 0)
                 {
@@ -133,7 +133,7 @@ namespace Sitemas_de_Armas_jijija
                 break;
 
                     case "3":
-                        continuidad = false; //cerrar programa
+                        continueFlag = false; //cerrar programa
                 break;
             }
         }
